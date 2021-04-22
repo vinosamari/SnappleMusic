@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+* {
+	font-family: "Nunito", sans-serif;
+}
+
+.big-text {
+	font-family: "Rock Salt", cursive;
+	font-size: 2rem;
+}
+
+.album-art.pause img {
+	animation: spin 3s linear infinite;
+	animation-play-state: paused;
+}
+
+.album-art.play img {
+	animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

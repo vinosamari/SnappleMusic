@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/dist/style.css" />
+		<link href="/tailwind.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<title>Snapple Music Player</title>
+	</head>
+	<body>
+		<!-- MAIN CONTAINER -->
+		<div
+			class="flex flex-col items-center justify-center from-blue-800 to-red-200 bg-gradient-to-t h-screen"
+		>
+			<!-- HEADER TEXT BIG -->
+			<h1
+				class="big-text mb-10 tracking-widest font-bold from-blue-300 to-pink-300 bg-gradient-to-bl shadow-2xl rounded-2xl p-4"
+			>
+				Snapple Music
+			</h1>
+			<!-- PLAYER CONTAINER -->
+			<div
+				class="music-player-container flex flex-row md:flex-row items-center py-10 px-24 w-1/2 shadow-2xl rounded-xl from-red-400 to-blue-300 bg-gradient-to-tr font-white"
+			>
+				<!-- ALBUM ART -->
+				<div id="album-art" class="album-art">
+					<img
+						id="cover-art"
+						class="rounded-full object-contain h-full w-full"
+						src="/albumArts/default_music_image.jpg"
+						alt="album-art"
+					/>
+				</div>
+				<!-- TRANSPORT PANEL AND MUSIC DETAILS  -->
+				<div
+					class="transport-container justify-center items-center flex flex-col max-w-screen-sm"
+				>
+					<!-- SONG INFO  -->
+					<div
+						class="song-details-container flex flex-col justify-center items-center mb-8"
+					>
+						<h2
+							id="song-title"
+							class="font-bold text-2xl tracking-wider capitalize"
+						>
+							Not Playing..
+						</h2>
+						<h2
+							id="artist-name"
+							class="text-gray-600 text-xs font-mono capitalize"
+						>
+							A Serious Artist
+						</h2>
+					</div>
+					<!-- SONG INFO  ENDS-->
+					<!-- PROGRESS BAR -->
+					<div
+						class="seekbar-container bg-white w-1/2 h-1 rounded-xl mb-4 relative"
+					>
+						<div
+							class="progress bg-red-500 h-1 rounded-2xl"
+							style="width: 50%"
+							id="progress-bar"
+						></div>
+					</div>
+					<!-- PROGRESS BAR ENDS -->
+					<!-- TRANSPORT BUTTONS -->
+					<div class="transport-panel flex">
+						<button><i id="prev" class="fa fa-fast-backward mx-4"></i></button>
+						<button><i id="play" class="fa fa-play mx-4 fa-2x"></i></button>
+						<button><i id="next" class="fa fa-fast-forward mx-4"></i></button>
+					</div>
+					<!-- TRANSPORT BUTTONS END-->
+					<!-- AUDIO -->
+					<audio id="audio" src=""></audio>
+				</div>
+				<!-- TRANSPORT PANEL AND MUSIC DETAILS END -->
+			</div>
+			<!-- PLAYER CONTAINER ENDS-->
+		</div>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="/dist/index.js"></script>
+	</body>
+</html>
